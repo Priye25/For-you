@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Shivani 🎉</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #e91e63;
+      text-shadow: 2px 2px #ffc1e3;
+    }
+
+    h2 {
+      color: #7b1fa2;
+      margin-bottom: 20px;
+    }
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ffb6c1;
+      box-shadow: 0 0 15px #ff69b4;
+      margin: 20px 0;
+    }
+
+    .message {
+      font-size: 1.2em;
+      color: #444;
+      margin: 20px 0;
+      line-height: 1.6em;
+    }
+
+    .from {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 30px;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎂 Happy Birthday Shivani Raj! 💖</h1>
+    <h2>You are the poetry my heart always wanted to write 💌</h2>
+    <img src="shivani.jpg" alt="Shivani Raj" class="photo" />
+    <p class="message">
+      💕 On 10th June, the world was blessed with someone truly magical — you, Shivani. <br/><br/>
+      Every moment with you feels like a dream come true 🌙<br/>
+      Your smile melts my worries, your eyes light up my soul ✨<br/>
+      You’re not just beautiful — you are beauty, love, and light all in one 🌹<br/><br/>
+      If I could gift you one thing, it would be to see yourself through my eyes — only then would you realize how deeply loved you are 💘<br/><br/>
+      Here's to your day, your smile, your magic... and hopefully, to us someday ❤️
+    </p>
+    <p class="from">— Forever yours (even if you don’t know it yet) 💞</p>
+  </div>
+</body>
+</html>
