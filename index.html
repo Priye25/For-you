@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Shivani 🎉</title>
+  <title>Happy Birthday Shivani Raj 🎉</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
+      overflow: hidden;
+      background: radial-gradient(circle at top left, #ff9a9e, #fad0c4, #fbc2eb);
+      background-size: 300% 300%;
+      animation: romanticBG 15s ease infinite;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
@@ -19,54 +20,56 @@
       height: 100vh;
     }
 
-    @keyframes gradientBG {
+    @keyframes romanticBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
     .card {
-      background: white;
+      background: rgba(255, 255, 255, 0.85);
       border-radius: 20px;
       padding: 40px 30px;
-      max-width: 500px;
+      max-width: 520px;
       text-align: center;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 20px 40px rgba(255, 105, 180, 0.4);
       animation: fadeIn 2s ease-in-out;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
       font-size: 2.8em;
-      color: #e91e63;
-      text-shadow: 2px 2px #ffc1e3;
+      color: #ff4d6d;
+      text-shadow: 2px 2px #ffe4ec;
     }
 
     h2 {
-      color: #7b1fa2;
+      color: #c9184a;
       margin-bottom: 20px;
     }
 
     .photo {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid #ffb6c1;
-      box-shadow: 0 0 15px #ff69b4;
+      border: 5px solid #ffb6b9;
+      box-shadow: 0 0 20px #ff69b4;
       margin: 20px 0;
     }
 
     .message {
-      font-size: 1.2em;
-      color: #444;
+      font-size: 1.25em;
+      color: #333;
       margin: 20px 0;
-      line-height: 1.6em;
+      line-height: 1.8em;
     }
 
     .from {
       font-style: italic;
-      font-size: 1em;
-      color: #555;
+      font-size: 1.1em;
+      color: #7b2cbf;
       margin-top: 30px;
       animation: pulse 1.5s infinite alternate;
     }
@@ -80,11 +83,45 @@
       from { transform: scale(1); }
       to { transform: scale(1.05); }
     }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff5d8f;
+      font-size: 2rem;
+      animation: floatHearts 8s linear infinite;
+      opacity: 0.75;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(100vh) scale(1); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
   </style>
 </head>
 <body>
+  <div class="hearts">
+    <div class="heart" style="left:10%; animation-delay: 0s;">💖</div>
+    <div class="heart" style="left:20%; animation-delay: 2s;">💘</div>
+    <div class="heart" style="left:30%; animation-delay: 4s;">💕</div>
+    <div class="heart" style="left:40%; animation-delay: 1s;">💗</div>
+    <div class="heart" style="left:50%; animation-delay: 3s;">💓</div>
+    <div class="heart" style="left:60%; animation-delay: 0.5s;">💞</div>
+    <div class="heart" style="left:70%; animation-delay: 1.5s;">❤️</div>
+    <div class="heart" style="left:80%; animation-delay: 2.5s;">🩷</div>
+  </div>
   <div class="card">
-    <h1>🎂 Happy Birthday Shivani! 💖</h1>
+    <h1>🎂 Happy Birthday Shivani Raj! 💖</h1>
     <h2>You are the poetry my heart always wanted to write 💌</h2>
     <img src="shivani.jpg" alt="Shivani Raj" class="photo" />
     <p class="message">
