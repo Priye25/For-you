@@ -1,132 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Shivani Raj 🎉</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: 
-        linear-gradient(rgba(255, 192, 203, 0.6), rgba(255, 192, 203, 0.6)),
-        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Miss JOJO ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    overflow-y:auto;
+    min-height:100vh;
+    background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ffb3c1,#ffc2d1);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.card{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+    padding:50px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+h1{
+    font-family:'Dancing Script',cursive;
+    font-size:5rem;
+    margin-bottom:10px;
+    text-shadow:0 0 20px rgba(255,255,255,.8);
+}
+
+.subtitle{
+    font-size:1.3rem;
+    margin-bottom:20px;
+}
+
+.message{
+    font-size:1.15rem;
+    line-height:1.9;
+    margin:25px 0;
+}
+
+.special{
+    font-family:'Dancing Script',cursive;
+    font-size:2rem;
+    margin-top:15px;
+}
+
+.btn{
+    margin-top:25px;
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    color:#ff4d6d;
+    background:white;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+.footer{
+    margin-top:25px;
+    font-size:1rem;
+}
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    z-index:1;
+    animation:fly linear infinite;
+}
+
+@keyframes fly{
+    from{
+        transform:translateY(0) scale(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    padding:20px;
+}
+
+.popup-box{
+    background:white;
+    color:#333;
+    width:100%;
+    max-width:650px;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.popup-box h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+.popup-box button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
+
+.cake{
+    font-size:70px;
+    margin-bottom:10px;
+}
+
+.glow{
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 30px white,0 0 50px white;
+    }
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+    .container{
+        padding:15px;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 20px;
-      padding: 40px 30px;
-      max-width: 520px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(255, 105, 180, 0.4);
-      animation: fadeIn 2s ease-in-out;
-      position: relative;
-      z-index: 1;
+    .card{
+        padding:25px 20px;
+        border-radius:20px;
     }
 
-    h1 {
-      font-size: 2.8em;
-      color: #ff4d6d;
-      text-shadow: 2px 2px #ffe4ec;
+    h1{
+        font-size:3rem;
+        line-height:1.1;
     }
 
-    h2 {
-      color: #c9184a;
-      margin-bottom: 20px;
+    .subtitle{
+        font-size:1rem;
     }
 
-    .photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #ffb6b9;
-      box-shadow: 0 0 20px #ff69b4;
-      margin: 20px 0;
+    .message{
+        font-size:0.95rem;
+        line-height:1.7;
     }
 
-    .message {
-      font-size: 1.25em;
-      color: #333;
-      margin: 20px 0;
-      line-height: 1.8em;
+    .special{
+        font-size:1.5rem;
     }
 
-    .from {
-      font-style: italic;
-      font-size: 1.1em;
-      color: #7b2cbf;
-      margin-top: 30px;
-      animation: pulse 1.5s infinite alternate;
+    .btn{
+        width:100%;
+        padding:14px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .popup-box{
+        padding:25px 20px;
+        max-height:85vh;
+        overflow-y:auto;
     }
 
-    @keyframes pulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
+    .cake{
+        font-size:50px;
+    }
+}
+
+@media screen and (max-width:480px){
+
+    h1{
+        font-size:2.4rem;
     }
 
-    .hearts {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      z-index: 0;
+    .subtitle{
+        font-size:0.9rem;
     }
 
-    .heart {
-      position: absolute;
-      color: #ff5d8f;
-      font-size: 2rem;
-      animation: floatHearts 8s linear infinite;
-      opacity: 0.75;
+    .message{
+        font-size:0.9rem;
     }
 
-    @keyframes floatHearts {
-      0% { transform: translateY(100vh) scale(1); opacity: 0; }
-      50% { opacity: 1; }
-      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    .special{
+        font-size:1.3rem;
     }
-  </style>
+
+    .card{
+        padding:20px 15px;
+    }
+}
+</style>
 </head>
+
 <body>
-  <div class="hearts">
-    <div class="heart" style="left:10%; animation-delay: 0s;">💖</div>
-    <div class="heart" style="left:20%; animation-delay: 2s;">💘</div>
-    <div class="heart" style="left:30%; animation-delay: 4s;">💕</div>
-    <div class="heart" style="left:40%; animation-delay: 1s;">💗</div>
-    <div class="heart" style="left:50%; animation-delay: 3s;">💓</div>
-    <div class="heart" style="left:60%; animation-delay: 0.5s;">💞</div>
-    <div class="heart" style="left:70%; animation-delay: 1.5s;">❤️</div>
-    <div class="heart" style="left:80%; animation-delay: 2.5s;">🩷</div>
-  </div>
-  <div class="card">
-    <h1>🎂 Happy Birthday Shivani Raj! 💖</h1>
-    <h2>You are the poetry my heart always wanted to write 💌</h2>
-    <img src="shivani.jpg" alt="Shivani Raj" class="photo" />
-    <p class="message">
-      💕 On 10th June, the world was blessed with someone truly magical — you, Shivani. <br/><br/>
-      Every moment with you feels like a dream come true 🌙<br/>
-      Your smile melts my worries, your eyes light up my soul ✨<br/>
-      You’re not just beautiful — you are beauty, love, and light all in one 🌹<br/><br/>
-      If I could gift you one thing, it would be to see yourself through my eyes — only then would you realize how deeply loved you are 💘<br/><br/>
-      Here's to your day, your smile, your magic... and hopefully, to us someday ❤️
-    </p>
-    <p class="from">— Forever yours (even if you don’t know it yet) 💞</p>
-  </div>
+
+<div class="container">
+    <div class="card">
+
+        <h1 class="glow">Happy Birthday Miss JOJO ❤️</h1>
+
+        <div class="subtitle">
+            🎂 10 June — The Day Someone Truly Special Was Born 🎂
+        </div>
+
+        <div class="message">
+            Dear Miss JOJO,
+
+            <br><br>
+
+            Happy Birthday to the most beautiful soul. ❤️
+
+            <br><br>
+
+            May your smile always shine brighter than the stars,
+            may your dreams turn into reality,
+            and may every moment of your life be filled with love,
+            happiness and endless blessings.
+
+            <br><br>
+
+            Thank you for being such a wonderful person.
+            The world is a better place because you are in it. ✨
+
+            <br><br>
+
+            On your special day, I wish you laughter that never ends,
+            memories you'll cherish forever,
+            and happiness that follows you everywhere. 💕
+        </div>
+
+        <div class="special">
+            Wishing You Love, Happiness & Endless Smiles ❤️
+        </div>
+
+        <button class="btn" onclick="openWish()">
+            💌 Open Special Birthday Message
+        </button>
+
+        <div class="footer">
+            Made with ❤️ Especially for Miss JOJO
+        </div>
+
+    </div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-box">
+
+        <div class="cake">🎂</div>
+
+        <h2>Special Birthday Message ❤️</h2>
+
+        <p style="line-height:1.9;">
+            Happy Birthday Miss JOJO! 🎉
+
+            <br><br>
+
+            May your life always be filled with beautiful moments,
+            wonderful surprises, and people who genuinely care for you.
+
+            <br><br>
+
+            Keep smiling, keep shining,
+            and keep being the amazing person you are.
+
+            <br><br>
+
+            May this year bring success, happiness,
+            good health and lots of unforgettable memories.
+
+            <br><br>
+
+            ✨❤️ Have an amazing birthday and an even more amazing year ahead ❤️✨
+
+            <br><br>
+
+            <strong style="color:#ff4d6d;font-size:20px;">
+                Aur haan Miss JOJO...
+                Birthday hai,
+                Party de do Kanjoos! 😜🎂🍕🍔🍰
+            </strong>
+        </p>
+
+        <button onclick="closeWish()">Close</button>
+
+    </div>
+</div>
+
+<script>
+function openWish(){
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closeWish(){
+    document.getElementById("popup").style.display = "none";
+}
+
+function createHeart(){
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💕","💖","💗","💘"][Math.floor(Math.random()*5)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
 </body>
 </html>
