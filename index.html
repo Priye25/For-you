@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Miss JOJO ❤️</title>
+<title>Happy Birthday Madhu ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -17,17 +19,24 @@
 body{
     font-family:'Poppins',sans-serif;
     overflow-x:hidden;
-    overflow-y:auto;
     min-height:100vh;
-    background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ffb3c1,#ffc2d1);
-    background-size:400% 400%;
-    animation:gradientBG 12s ease infinite;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url('./Madhu.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
-@keyframes gradientBG{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+/* Floating Background */
+
+.bg-overlay{
+    position:fixed;
+    inset:0;
+    backdrop-filter:blur(5px);
+    z-index:0;
 }
 
 .container{
@@ -43,55 +52,94 @@ body{
 .card{
     width:100%;
     max-width:900px;
+
     text-align:center;
+
     padding:50px;
+
     border-radius:30px;
+
     background:rgba(255,255,255,0.15);
+
     backdrop-filter:blur(15px);
+
     color:white;
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+
     animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.profile-photo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    0 0 20px white,
+    0 0 40px pink,
+    0 0 60px hotpink;
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
 }
 
 h1{
     font-family:'Dancing Script',cursive;
     font-size:5rem;
-    margin-bottom:10px;
-    text-shadow:0 0 20px rgba(255,255,255,.8);
+    text-shadow:0 0 20px white;
 }
 
 .subtitle{
+    margin-top:10px;
     font-size:1.3rem;
-    margin-bottom:20px;
 }
 
 .message{
-    font-size:1.15rem;
+    margin-top:25px;
     line-height:1.9;
-    margin:25px 0;
+    font-size:1.1rem;
 }
 
 .special{
+    margin-top:20px;
     font-family:'Dancing Script',cursive;
     font-size:2rem;
-    margin-top:15px;
 }
 
 .btn{
-    margin-top:25px;
+    margin-top:30px;
     border:none;
+    background:white;
+    color:#ff4d6d;
     padding:15px 35px;
     border-radius:50px;
     cursor:pointer;
-    font-size:1rem;
-    font-weight:600;
-    color:#ff4d6d;
-    background:white;
+    font-weight:700;
     transition:.3s;
 }
 
@@ -100,43 +148,26 @@ h1{
 }
 
 .footer{
-    margin-top:25px;
+    margin-top:30px;
     font-size:1rem;
 }
 
-.heart{
-    position:fixed;
-    bottom:-50px;
-    z-index:1;
-    animation:fly linear infinite;
-}
-
-@keyframes fly{
-    from{
-        transform:translateY(0) scale(0);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-120vh) scale(1.5);
-        opacity:0;
-    }
-}
+/* Popup */
 
 .popup{
     display:none;
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.8);
+    background:rgba(0,0,0,.85);
     justify-content:center;
     align-items:center;
     z-index:999;
-    padding:20px;
 }
 
 .popup-box{
     background:white;
     color:#333;
-    width:100%;
+    width:90%;
     max-width:650px;
     padding:35px;
     border-radius:25px;
@@ -158,218 +189,320 @@ h1{
     cursor:pointer;
 }
 
-.cake{
-    font-size:70px;
-    margin-bottom:10px;
+/* Hearts */
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    z-index:1;
+    animation:fly linear infinite;
 }
 
-.glow{
-    animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
+@keyframes fly{
     from{
-        text-shadow:0 0 10px white;
+        transform:translateY(0) scale(0);
+        opacity:1;
     }
     to{
-        text-shadow:0 0 30px white,0 0 50px white;
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
     }
 }
 
-/* Mobile Responsive */
+/* Balloons */
 
-@media screen and (max-width:768px){
+.balloon{
+    position:fixed;
+    bottom:-120px;
+    font-size:45px;
+    z-index:1;
+    animation:balloonFly linear infinite;
+}
 
-    .container{
-        padding:15px;
+@keyframes balloonFly{
+    from{
+        transform:translateY(0);
     }
-
-    .card{
-        padding:25px 20px;
-        border-radius:20px;
+    to{
+        transform:translateY(-120vh);
     }
+}
+
+/* Music Button */
+
+.music-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:999;
+    border:none;
+    background:white;
+    padding:12px 18px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
 
     h1{
         font-size:3rem;
-        line-height:1.1;
     }
 
-    .subtitle{
-        font-size:1rem;
-    }
-
-    .message{
-        font-size:0.95rem;
-        line-height:1.7;
-    }
-
-    .special{
-        font-size:1.5rem;
-    }
-
-    .btn{
-        width:100%;
-        padding:14px;
-    }
-
-    .popup-box{
-        padding:25px 20px;
-        max-height:85vh;
-        overflow-y:auto;
-    }
-
-    .cake{
-        font-size:50px;
-    }
-}
-
-@media screen and (max-width:480px){
-
-    h1{
-        font-size:2.4rem;
-    }
-
-    .subtitle{
-        font-size:0.9rem;
-    }
-
-    .message{
-        font-size:0.9rem;
-    }
-
-    .special{
-        font-size:1.3rem;
+    .profile-photo{
+        width:140px;
+        height:140px;
     }
 
     .card{
-        padding:20px 15px;
+        padding:25px;
+    }
+
+    .message{
+        font-size:.95rem;
     }
 }
+
 </style>
+
 </head>
 
 <body>
 
+<div class="bg-overlay"></div>
+
+<button class="music-btn" onclick="toggleMusic()">
+🎵 Music
+</button>
+
+<audio id="birthdayMusic" loop>
+    <source src="./the_mountain-happy-birthday-508020.mp3" type="audio/mpeg">
+</audio>
+
 <div class="container">
-    <div class="card">
 
-        <h1 class="glow">Happy Birthday Miss JOJO ❤️</h1>
+<div class="card">
 
-        <div class="subtitle">
-            🎂 11 June — The Day Someone Truly Special Was Born 🎂
-        </div>
+<img src="./Madhu.jpg" class="profile-photo">
 
-        <div class="message">
-            Dear Miss JOJO,
+<h1>Happy Birthday Madhu ❤️</h1>
 
-            <br><br>
+<div class="subtitle">
+🎂 The Day A Beautiful Soul Was Born - 23rd June 🎂
+</div>
 
-            Happy Birthday to the most beautiful soul. ❤️
+<div class="message">
 
-            <br><br>
+Dear Madhu,
 
-            May your smile always shine brighter than the stars,
-            may your dreams turn into reality,
-            and may every moment of your life be filled with love,
-            happiness and endless blessings.
+<br><br>
 
-            <br><br>
+Today is all about celebrating the wonderful person you are.
 
-            Thank you for being such a wonderful person.
-            The world is a better place because you are in it. ✨
+May your smile always stay as bright as the stars,
+your dreams become reality,
+and your heart remain filled with happiness, love and peace.
 
-            <br><br>
+<br><br>
 
-            On your special day, I wish you laughter that never ends,
-            memories you'll cherish forever,
-            and happiness that follows you everywhere. 💕
-        </div>
+Thank you for bringing warmth, kindness and positivity wherever you go.
 
-        <div class="special">
-            Wishing You Love, Happiness & Endless Smiles ❤️
-        </div>
+You deserve all the happiness this world can offer.
 
-        <button class="btn" onclick="openWish()">
-            💌 Open Special Birthday Message
-        </button>
+<br><br>
 
-        <div class="footer">
-            Made with ❤️ Especially for Miss JOJO
-        </div>
+May this year bring beautiful memories,
+new adventures,
+success in everything you do,
+and countless reasons to smile.
 
-    </div>
+<br><br>
+
+You are truly special and today is a reminder of how lucky the world is to have you.
+
+✨❤️✨
+
+</div>
+
+<div class="special">
+Wishing You Endless Smiles, Love & Happiness ❤️
+</div>
+
+<button class="btn" onclick="openWish()">
+💌 Open Special Birthday Message
+</button>
+
+<div class="footer">
+Made with ❤️, Smiles & Endless Wishes for Madhu ✨
+</div>
+
+</div>
 </div>
 
 <div class="popup" id="popup">
-    <div class="popup-box">
 
-        <div class="cake">🎂</div>
+<div class="popup-box">
 
-        <h2>Special Birthday Message ❤️</h2>
+<h2>🎂 Special Birthday Message 🎂</h2>
 
-        <p style="line-height:1.9;">
-            Happy Birthday Miss JOJO! 🎉
+<p style="line-height:1.9">
 
-            <br><br>
+Happy Birthday Madhu ❤️
 
-            May your life always be filled with beautiful moments,
-            wonderful surprises, and people who genuinely care for you.
+<br><br>
 
-            <br><br>
+May your life always be filled with joy,
+beautiful surprises,
+good health,
+success and lots of love.
 
-            Keep smiling, keep shining,
-            and keep being the amazing person you are.
+<br><br>
 
-            <br><br>
+Keep smiling,
+keep shining,
+and never stop being the amazing person you are.
 
-            May this year bring success, happiness,
-            good health and lots of unforgettable memories.
+<br><br>
 
-            <br><br>
+May every wish you make today come true.
 
-            ✨❤️ Have an amazing birthday and an even more amazing year ahead ❤️✨
+✨❤️ Have the most wonderful birthday ever ❤️✨
 
-            <br><br>
+<br><br>
 
-            <strong style="color:#ff4d6d;font-size:20px;">
-                Aur haan Miss JOJO...
-                Birthday hai,
-                Party dena mat Bhulna Kanjoos! 😜🎂🍕🍔🍰
-            </strong>
-        </p>
+<strong style="color:#ff4d6d;font-size:20px;">
+And yes Madhu...
+Birthday hai 😜🎂🍕🍔🍰
+Party dena mat bhoolna!
+</strong>
 
-        <button onclick="closeWish()">Close</button>
+</p>
 
-    </div>
+<button onclick="closeWish()">
+Close
+</button>
+
+</div>
+
 </div>
 
 <script>
+
+const music=document.getElementById("birthdayMusic");
+
+document.body.addEventListener("click",function(){
+
+music.play();
+
+},{once:true});
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
+
 function openWish(){
-    document.getElementById("popup").style.display = "flex";
+
+document.getElementById("popup").style.display="flex";
+
+for(let i=0;i<60;i++){
+
+const conf=document.createElement("div");
+
+conf.innerHTML="🎉";
+
+conf.style.position="fixed";
+conf.style.left=Math.random()*100+"vw";
+conf.style.top="-20px";
+conf.style.fontSize="25px";
+conf.style.zIndex="1000";
+
+conf.animate([
+{transform:"translateY(0) rotate(0deg)"},
+{transform:"translateY(100vh) rotate(720deg)"}
+],{
+duration:3000
+});
+
+document.body.appendChild(conf);
+
+setTimeout(()=>{
+conf.remove();
+},3000);
+
+}
+
 }
 
 function closeWish(){
-    document.getElementById("popup").style.display = "none";
+
+document.getElementById("popup").style.display="none";
+
 }
 
 function createHeart(){
-    const heart = document.createElement("div");
 
-    heart.className = "heart";
-    heart.innerHTML = ["❤️","💕","💖","💗","💘"][Math.floor(Math.random()*5)];
+const heart=document.createElement("div");
 
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (20 + Math.random() * 25) + "px";
-    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+heart.className="heart";
 
-    document.body.appendChild(heart);
+heart.innerHTML=["❤️","💕","💖","💗","💘"][Math.floor(Math.random()*5)];
 
-    setTimeout(() => {
-        heart.remove();
-    }, 10000);
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},10000);
+
 }
 
-setInterval(createHeart, 300);
+setInterval(createHeart,300);
+
+function createBalloon(){
+
+const balloon=document.createElement("div");
+
+balloon.className="balloon";
+
+balloon.innerHTML=
+["🎈","🎈","🎈","🎉"][Math.floor(Math.random()*4)];
+
+balloon.style.left=Math.random()*100+"vw";
+
+balloon.style.animationDuration=
+(8+Math.random()*5)+"s";
+
+document.body.appendChild(balloon);
+
+setTimeout(()=>{
+
+balloon.remove();
+
+},15000);
+
+}
+
+setInterval(createBalloon,1000);
+
 </script>
 
 </body>
